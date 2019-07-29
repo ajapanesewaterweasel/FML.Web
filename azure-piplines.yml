@@ -29,4 +29,4 @@ steps:
     PathtoPublish: 'src/dist'
     ArtifactName: FML.Web
     
-- script: docker build -t FML/Web
+- script: docker build -t wanwanmedia/fml.web:latest
