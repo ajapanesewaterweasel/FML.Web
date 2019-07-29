@@ -1,5 +1,5 @@
 trigger:
-- master
+- develop
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -28,3 +28,5 @@ steps:
   inputs:
     PathtoPublish: 'src/dist'
     ArtifactName: FML.Web
+    
+- script: docker build -t FML/Web
