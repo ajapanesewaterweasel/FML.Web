@@ -19,14 +19,10 @@ steps:
     customCommand: run build -- --prod
     workingDir: src
 
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'angular'
-    targetPath: 'src/dist'
+- script: docker build -t wanwanmedia/fml.web:latest .
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'src/dist'
+    PathtoPublish: 'src'
     ArtifactName: FML.Web
-    
-- script: docker build -t wanwanmedia/fml.web:latest .
+   
