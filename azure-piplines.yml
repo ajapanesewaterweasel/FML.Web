@@ -19,10 +19,8 @@ steps:
     customCommand: run build -- --prod
     workingDir: src
 
-- script: docker build -t wanwanmedia/fml.web:latest .
-
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'src'
+    PathtoPublish: 'src/dist'
     ArtifactName: FML.Web
    
