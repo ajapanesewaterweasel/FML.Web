@@ -1,3 +1,2 @@
-FROM node:latest
-COPY . src/dist
-CMD ng serve --host 0.0.0.0
+FROM nginx:latest
+COPY src/dist /usr/share/nginx/html
